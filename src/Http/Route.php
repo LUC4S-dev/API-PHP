@@ -1,15 +1,15 @@
-<?php
+<?php 
 
 namespace App\Http;
 
-class Route{
+class Route 
+{
     private static array $routes = [];
-
 
     public static function get(string $path, string $action)
     {
         self::$routes[] = [
-            'path' => $path,
+            'path'   => $path,
             'action' => $action,
             'method' => 'GET'
         ];
@@ -18,17 +18,16 @@ class Route{
     public static function post(string $path, string $action)
     {
         self::$routes[] = [
-            'path' => $path,
+            'path'   => $path,
             'action' => $action,
             'method' => 'POST'
         ];
     }
 
-    
     public static function put(string $path, string $action)
     {
         self::$routes[] = [
-            'path' => $path,
+            'path'   => $path,
             'action' => $action,
             'method' => 'PUT'
         ];
@@ -37,7 +36,7 @@ class Route{
     public static function delete(string $path, string $action)
     {
         self::$routes[] = [
-            'path' => $path,
+            'path'   => $path,
             'action' => $action,
             'method' => 'DELETE'
         ];
@@ -46,7 +45,5 @@ class Route{
     public static function routes()
     {
         return self::$routes;
-        
     }
-
 }
